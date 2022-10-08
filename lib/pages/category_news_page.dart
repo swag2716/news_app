@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../bloc/news_bloc/category_news_bloc/category_news_bloc.dart';
-import '../bloc/news_bloc/category_news_bloc/category_news_event.dart';
-import '../bloc/news_bloc/category_news_bloc/category_news_state.dart';
+import '../category_news_bloc/category_news_bloc.dart';
+import '../category_news_bloc/category_news_event.dart';
+import '../category_news_bloc/category_news_state.dart';
 import 'home_page.dart';
 import '../models/article_model.dart';
 

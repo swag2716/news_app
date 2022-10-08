@@ -7,7 +7,7 @@ import 'package:news_app/helper/news.dart';
 import 'package:news_app/models/article_model.dart';
 import 'package:news_app/models/category_model.dart';
 import 'package:news_app/pages/category_news_page.dart';
-import '../bloc/news_bloc/category_news_bloc/category_news_bloc.dart';
+import '../category_news_bloc/category_news_bloc.dart';
 import '../bloc/news_bloc/news_bloc.dart';
 import '../bloc/news_bloc/news_state.dart';
 import 'article_page.dart';
@@ -64,17 +64,15 @@ class _HomePageState extends State<HomePage> {
                 Container(           
                   height: 80,
                  
-                  child: Flexible(
-                    child: ListView.builder(
-                        shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                        itemCount: categories.length,
-                        itemBuilder: (context, index) {
-                          return CategoryTile(
-                              imageUrl: categories[index].imageUrl,
-                              categoryName: categories[index].categoryName);
-                        }),
-                  ),
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: categories.length,
+                      itemBuilder: (context, index) {
+                        return CategoryTile(
+                            imageUrl: categories[index].imageUrl,
+                            categoryName: categories[index].categoryName);
+                      }),
                 ),
 
                 //Blogs
